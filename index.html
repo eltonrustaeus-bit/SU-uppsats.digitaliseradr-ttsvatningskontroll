@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Arbetstitel – Institution – Stockholms universitet</title>
+    <meta name="description" content="Akademisk uppsats-/artikelmall med tydlig struktur och källförteckning." />
+
+    <style>
+      :root{
+        --bg:#ffffff;
+        --text:#111827;
+        --muted:#6b7280;
+        --border:#e5e7eb;
+        --accent:#1f2937;
+        --link:#1d4ed8;
+        --max: 860px;
+      }
+      *{box-sizing:border-box}
+      body{
+        margin:0;
+        font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+        background:var(--bg);
+        color:var(--text);
+        line-height:1.65;
+      }
+      a{color:var(--link); text-decoration:none}
+      a:hover{text-decoration:underline}
+      header{
+        border-bottom:1px solid var(--border);
+        padding:28px 18px 18px;
+      }
+      .wrap{max-width:var(--max); margin:0 auto;}
+      .toprow{
+        display:flex; gap:18px; align-items:flex-start; justify-content:space-between;
+        flex-wrap:wrap;
+      }
+      .brand{
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-size:14px;
+        letter-spacing:.02em;
+        color:var(--muted);
+      }
+      h1{
+        margin:10px 0 6px;
+        font-size:34px;
+        line-height:1.2;
+        color:var(--accent);
+      }
+      .subtitle{
+        margin:0;
+        font-size:16px;
+        color:var(--muted);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      .meta{
+        margin-top:14px;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:8px 18px;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-size:13px;
+        color:var(--muted);
+      }
+      .meta div strong{color:var(--text); font-weight:600}
+      main{padding:22px 18px 44px;}
+      section{margin:26px 0;}
+      h2{
+        font-size:20px;
+        margin:0 0 10px;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        color:var(--accent);
+      }
+      h3{
+        font-size:16px;
+        margin:18px 0 8px;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        color:var(--accent);
+      }
+      p{margin:0 0 12px;}
+      .abstract{
+        border:1px solid var(--border);
+        border-left:4px solid var(--accent);
+        padding:14px 14px 10px;
+        background:#fbfbfb;
+      }
+      .abstract .label{
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-size:12px;
+        text-transform:uppercase;
+        letter-spacing:.08em;
+        color:var(--muted);
+        margin-bottom:6px;
+      }
+      .keywords{
+        margin-top:8px;
+        font-size:13px;
+        color:var(--muted);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      blockquote{
+        margin:14px 0;
+        padding:10px 14px;
+        border-left:3px solid var(--border);
+        color:#374151;
+        background:#fafafa;
+      }
+      .figure{
+        border:1px solid var(--border);
+        padding:12px;
+        margin:14px 0;
+        background:#fcfcfc;
+      }
+      .figure .cap{
+        margin-top:8px;
+        font-size:13px;
+        color:var(--muted);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      table{
+        width:100%;
+        border-collapse:collapse;
+        margin:12px 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        font-size:14px;
+      }
+      th, td{
+        border:1px solid var(--border);
+        padding:10px;
+        vertical-align:top;
+      }
+      th{background:#f9fafb; text-align:left;}
+      .note{
+        font-size:13px;
+        color:var(--muted);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      .refs ol{padding-left:18px;}
+      .refs li{margin:10px 0;}
+      footer{
+        border-top:1px solid var(--border);
+        padding:18px;
+        color:var(--muted);
+        font-size:12px;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+      .pill{
+        display:inline-block;
+        padding:2px 10px;
+        border:1px solid var(--border);
+        border-radius:999px;
+        font-size:12px;
+        color:var(--muted);
+        margin-right:6px;
+      }
+      @media (max-width:720px){
+        .meta{grid-template-columns:1fr;}
+        h1{font-size:28px;}
+      }
+      @media print{
+        header, footer{border:none}
+        a{color:inherit; text-decoration:none}
+        .abstract{break-inside:avoid}
+        section{break-inside:avoid}
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrap">
+        <div class="toprow">
+          <div>
+            <div class="brand">Institution / Enhet · Stockholms universitet</div>
+            <h1><!-- ARBETSTITEL -->Titel på texten</h1>
+            <p class="subtitle"><!-- UNDERRUBRIK -->Underrubrik eller kort beskrivning</p>
+          </div>
+          <div class="brand" style="text-align:right; min-width:220px;">
+            <div class="pill">Uppsats</div>
+            <div class="pill">Artikel</div>
+            <div style="margin-top:8px;">
+              <div><!-- DATUM -->2026-01-30</div>
+              <div><!-- VERSION -->Version 1.0</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta">
+          <div><strong>Författare:</strong> <!-- NAMN -->[Ditt namn]</div>
+          <div><strong>Kontakt:</strong> <!-- EMAIL -->[din e-post]</div>
+          <div><strong>Kurs/Program:</strong> <!-- KURS -->[Kursnamn]</div>
+          <div><strong>Handledare:</strong> <!-- HANDLEDARE -->[Namn]</div>
+          <div><strong>Institution:</strong> <!-- INST -->[Institution]</div>
+          <div><strong>Nyckelord:</strong> <!-- KEYWORDS -->[3–6 nyckelord]</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="abstract">
+        <div class="label">Sammanfattning (Abstract)</div>
+        <p><!-- ABSTRACT -->
+          Skriv 120–200 ord som sammanfattar syfte, metod, resultat och slutsats.
+        </p>
+        <div class="keywords"><strong>Nyckelord:</strong> <!-- KEYWORDS_REPEAT -->[nyckelord, nyckelord, nyckelord]</div>
+      </section>
+
+      <section>
+        <h2>1. Inledning</h2>
+        <p><!-- INTRO_1 -->Bakgrund och kontext.</p>
+        <p><!-- INTRO_2 -->Problemformulering och avgränsningar.</p>
+
+        <h3>1.1 Syfte</h3>
+        <p><!-- PURPOSE -->Vad texten ska undersöka eller argumentera för.</p>
+
+        <h3>1.2 Frågeställningar</h3>
+        <ol>
+          <li><!-- RQ1 -->[Fråga 1]</li>
+          <li><!-- RQ2 -->[Fråga 2]</li>
+          <li><!-- RQ3 -->[Fråga 3]</li>
+        </ol>
+
+        <h3>1.3 Disposition</h3>
+        <p><!-- DISPOSITION -->Kort om hur texten är upplagd.</p>
+      </section>
+
+      <section>
+        <h2>2. Teoretisk bakgrund och tidigare forskning</h2>
+        <p><!-- THEORY_1 -->Definiera centrala begrepp och teorier.</p>
+
+        <blockquote>
+          <!-- QUOTE_PLACEHOLDER -->
+          Citat/definition med korrekt hänvisning, t.ex. (Efternamn, år, s. xx).
+        </blockquote>
+
+        <p><!-- THEORY_2 -->Sammanfatta tidigare forskning och identifiera kunskapslucka.</p>
+      </section>
+
+      <section>
+        <h2>3. Metod</h2>
+        <h3>3.1 Design</h3>
+        <p><!-- METHOD_DESIGN -->Kvalitativ/kvantitativ/litteraturstudie, urval, material.</p>
+
+        <h3>3.2 Datainsamling</h3>
+        <p><!-- DATA_COLLECTION -->Hur data samlades in.</p>
+
+        <h3>3.3 Analys</h3>
+        <p><!-- ANALYSIS -->Hur analysen genomfördes och varför.</p>
+
+        <h3>3.4 Etiska överväganden</h3>
+        <p><!-- ETHICS -->Kort om etik, anonymisering, samtycke, bias.</p>
+      </section>
+
+      <section>
+        <h2>4. Resultat</h2>
+        <p><!-- RESULTS_1 -->Presentera resultat strukturerat (teman/tabeller/figurer).</p>
+
+        <div class="figure">
+          <div style="height:180px; display:flex; align-items:center; justify-content:center; color:var(--muted); border:1px dashed var(--border);">
+            Figur/diagram plats (valfritt)
+          </div>
+          <div class="cap"><strong>Figur 1.</strong> <!-- FIG1_CAPTION -->Bildtext med källa vid behov.</div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th><!-- COL1 -->Kategori</th>
+              <th><!-- COL2 -->Observation</th>
+              <th><!-- COL3 -->Kommentar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><!-- R1C1 -->[Exempel]</td>
+              <td><!-- R1C2 -->[Exempel]</td>
+              <td><!-- R1C3 -->[Exempel]</td>
+            </tr>
+            <tr>
+              <td><!-- R2C1 -->[Exempel]</td>
+              <td><!-- R2C2 -->[Exempel]</td>
+              <td><!-- R2C3 -->[Exempel]</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="note"><!-- NOTE_RESULTS -->Not: Ange enhet, n, period, definitioner vid behov.</p>
+      </section>
+
+      <section>
+        <h2>5. Analys och diskussion</h2>
+        <p><!-- DISCUSS_1 -->Tolka resultaten i relation till teori och tidigare forskning.</p>
+        <p><!-- DISCUSS_2 -->Alternativa tolkningar, osäkerheter, metodbegränsningar.</p>
+
+        <h3>5.1 Implikationer</h3>
+        <p><!-- IMPLICATIONS -->Praktiska/teoretiska implikationer.</p>
+      </section>
+
+      <section>
+        <h2>6. Slutsats</h2>
+        <p><!-- CONCLUSION -->Besvara syfte/frågeställningar kort och tydligt.</p>
+
+        <h3>6.1 Förslag till fortsatt forskning</h3>
+        <p><!-- FUTURE -->Vad som skulle kunna undersökas vidare.</p>
+      </section>
+
+      <section class="refs">
+        <h2>Referenser</h2>
+        <p class="note">Exempelformat (anpassa till APA/Harvard enligt din kurs).</p>
+        <ol>
+          <li><!-- REF1 -->Efternamn, F. (År). <em>Titel</em>. Utgivare. DOI/URL (om relevant).</li>
+          <li><!-- REF2 -->Efternamn, F. (År). “Artikelns titel.” <em>Tidskrift</em>, vol(nr), s–s.</li>
+          <li><!-- REF3 -->Myndighet/Organisation. (År). <em>Rapporttitel</em>. Utgivare. URL.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Bilagor</h2>
+        <p><!-- APPENDIX -->Bilaga A: [Titel]. Bilaga B: [Titel].</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div><!-- FOOTER_LINE1 -->Dokumentmall för akademisk text · Anpassa rubriker/format efter kursens riktlinjer.</div>
+        <div><!-- FOOTER_LINE2 -->Senast uppdaterad: 2026-01-30</div>
+      </div>
+    </footer>
+  </body>
+</html>
